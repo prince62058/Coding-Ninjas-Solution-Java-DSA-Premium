@@ -70,10 +70,12 @@ public class Solution {
 	public static LinkedListNode<Integer> deleteNode(LinkedListNode<Integer> head, int i) {
 		// Write your code here.
         
-         if(head==null )
+         if(head==null ){
             return head;
-        if(i==0)
+	 }
+        if(i==0){
             return head.next;
+	}
         int count=0;
         LinkedListNode<Integer> temp=head;
         while(temp!=null && count<i-1)
@@ -81,9 +83,10 @@ public class Solution {
             temp=temp.next;
             count++;
         }
-        if(temp==null)
+        if(temp==null){
             return head;
-        if(temp.next!=null)
+	}
+        if(temp.next!=null){
             temp.next=temp.next.next;
          
         
